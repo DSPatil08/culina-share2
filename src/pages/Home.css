@@ -1,0 +1,22 @@
+/* src/pages/Home.css */
+.home-container {
+  padding: 10px 335px; /* Adjust padding to center the content vertically */
+  text-align: center;
+  margin-top: -235px; /* Adjust this margin to maintain a space of 10px below the Navbar */
+}
+
+.cta-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
+}
