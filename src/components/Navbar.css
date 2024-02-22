@@ -1,0 +1,22 @@
+/* src/components/Navbar.css */
+.navbar {
+  display: flex;
+  background-color: #b0ca0b;
+  padding: 10px;
+  justify-content: space-around;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Set z-index to ensure Navbar is above other elements */
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover {
+  color: #b4475c;
+}
