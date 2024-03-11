@@ -3,22 +3,22 @@ body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #1e1d1ddc; /* Set a background color for the entire page */
+  background-color: #1e1d1ddc; 
 }
 .contribute-container {
-  max-width: 800px; /* Increase the max-width for a more spacious layout */
+  max-width: 800px;
   margin: auto;
-  padding: 50px 525px; /* Increase padding for better spacing */
+  padding: 50px 525px;
   text-align: center;
 }
 
 form {
-  max-width: 600px; /* Set a max-width for the form */
-  margin: 0 auto; /* Center the form horizontally */
+  max-width: 600px;
+  margin: 0 auto; 
   padding: 5px;
-  border: 1px solid #ddd; /* Add a border to the form */
-  border-radius: 10px; /* Add border radius for a modern look */
-  background-color: rgb(30, 30, 30); /* Set the background color of the form */
+  border: 1px solid #ddd;
+  border-radius: 10px; 
+  background-color: rgb(30, 30, 30);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -26,25 +26,25 @@ form {
 }
 
 label {
-  margin-top: 10px; /* Increase the margin for better spacing */
+  margin-top: 10px; 
   color: #ff9900;
-  font-size: 18px; /* Increase font size for better readability */
+  font-size: 18px; 
 }
 
 textarea,
 input {
-  margin-top: 10px; /* Adjusted margin for better spacing */
-  padding: 12px; /* Increase padding for better input field appearance */
+  margin-top: 10px; 
+  padding: 12px; 
   font-size: 16px;
-  width: calc(100% - 10px); /* Full width for better responsiveness */
+  width: calc(100% - 10px); 
   box-sizing: border-box;
-  border: 1px solid #ddd; /* Add a subtle border for input fields */
-  border-radius: 8px; /* Add rounded corners for a modern look */
+  border: 1px solid #ddd; 
+  border-radius: 8px; 
 }
 
 button {
   margin-top: 20px;
-  padding: 15px; /* Increase padding for a larger button */
+  padding: 15px;
   background-color: #4caf50;
   color: #fff;
   border: none;
@@ -59,8 +59,8 @@ button:hover {
 }
 
 .submit-message {
-  margin-top: 30px; /* Adjusted margin for better spacing */
-  padding: 15px; /* Increase padding for better appearance */
+  margin-top: 30px;
+  padding: 15px; 
   font-size: 18px;
   color: #ffcc00;
 }
@@ -69,12 +69,12 @@ button:hover {
   color: #4caf50;
   background-color: #d4edda;
   border: 1px solid #c3e6cb;
-  border-radius: 8px; /* Add rounded corners for a modern look */
+  border-radius: 8px; 
 }
 
 .failure {
   color: #dc3545;
   background-color: #f8d7da;
   border: 1px solid #f5c6cb;
-  border-radius: 8px; /* Add rounded corners for a modern look */
+  border-radius: 8px;
 }
