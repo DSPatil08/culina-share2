@@ -1,7 +1,7 @@
 // src/pages/Contribute.jsx
 import React, { useState, useContext } from 'react';
 import RecipeContext from '../RecipeContext';
-import './Contribute.css'; // Import your Contribute styles
+import './Contribute.css';
 
 const Contribute = () => {
   const [recipe, setRecipe] = useState({
@@ -24,21 +24,15 @@ const Contribute = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Check if any of the fields is missing
     if (!recipe.title || !recipe.ingredients || !recipe.instructions) {
       setSubmitStatus('failure');
       return;
     }
-
-    // Simulate backend processing (replace with actual API call)
     setTimeout(() => {
-      // For demonstration, always set submitStatus to 'success'
-      setSubmitStatus('success');
 
-      // Update recipes context with the new recipe
+      setSubmitStatus('success');
       setRecipes((prevRecipes) => [...prevRecipes, recipe]);
 
-      // Clear form after successful submission
       setRecipe({
         title: '',
         ingredients: '',
