@@ -12,7 +12,6 @@ const RecipeDetail = () => {
   useEffect(() => {
     const fetchRecipes = async () => {
       try {
-        // Replace YOUR_APP_ID and YOUR_APP_KEY with your Edamam app ID and key
         const response = await axios.get(
           `https://api.edamam.com/api/recipes/v2?type=public&q=pasta&app_id=263c6717&app_key=4b4fa176947d935f6072108dceb115c0`
         );
@@ -37,7 +36,6 @@ const RecipeDetail = () => {
   }, []);
 
   useEffect(() => {
-    // Filter recipes based on search term
     const filtered = recipes.filter(recipe =>
       recipe.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
@@ -46,7 +44,7 @@ const RecipeDetail = () => {
 
   const addToFavorites = (recipe) => {
     setFavorites((prevFavorites) => [...prevFavorites, recipe]);
-    // Show success message (you can use state or another mechanism for this)
+    // Show success message
     alert('Recipe added to Favorites!');
   };
 
