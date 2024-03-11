@@ -2,7 +2,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import { Link } from 'react-router-dom';
-import './Home.css'; // Import your Home styles
+import './Home.css'; 
 
 const Home = () => {
   return (
