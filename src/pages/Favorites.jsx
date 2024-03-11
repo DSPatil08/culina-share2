@@ -1,7 +1,7 @@
 // src/pages/Favorites.jsx
 import React, { useContext } from 'react';
 import RecipeContext from '../RecipeContext';
-import './Favorites.css'; // Import your Favorites styles
+import './Favorites.css'; 
 
 const Favorites = () => {
   const { favorites } = useContext(RecipeContext);
