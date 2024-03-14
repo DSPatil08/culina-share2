@@ -1,4 +1,4 @@
-# Culina Share Web Application for Perist Ventures
+# Culina Share Web Application
 
 A recipe discovering and saving application for various cuisines.
 
