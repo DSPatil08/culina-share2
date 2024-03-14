@@ -16,7 +16,7 @@ Culina Share is a web application designed to elevate your culinary journey by o
 # Getting Started:
 1. Clone the repository:
 ```
-$ npm install -g bash-handbook
+$ npm install
 ```
 
 2. Install dependencies:
