@@ -37,6 +37,6 @@ Contributions from the community to enhance Culina Share further are welcomed. F
 
 Embark on a culinary adventure with Culina Share and discover a world of flavors at your fingertips. Start exploring, saving, and sharing your favorite recipes today!
 
-Demo:
+# Demo:
 
 For a live demonstration of Culina Share, visit [Cookbook Preview: Take a peek into Culina Share!](https://culina-share-0301.vercel.app/).
