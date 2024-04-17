@@ -1,6 +1,5 @@
-// src/pages/RecipeDetail.jsx
-import React, { useState, useEffect, useContext } from 'react';
 import axios from 'axios';
+import React, { useContext, useEffect, useState } from 'react';
 import RecipeContext from '../RecipeContext';
 import './RecipeDetail.css';
 
@@ -15,15 +14,14 @@ const RecipeDetail = () => {
         const response = await axios.get(
           `https://api.edamam.com/api/recipes/v2?type=public&q=pasta&app_id=263c6717&app_key=4b4fa176947d935f6072108dceb115c0`
         );
-        
-        // Extract relevant data from the response (update accordingly)
+
         const recipesFromEdamam = response.data.hits.map(hit => ({
           id: hit.recipe.uri,
           title: hit.recipe.label,
           image: hit.recipe.image,
           dishTypes: hit.recipe.dishType,
           cuisines: hit.recipe.cuisineType,
-          instructions: hit.recipe.ingredientLines.join('\n'),
+          instructions: hit.recipe.ingredientLines,
         }));
 
         setFilteredRecipes(recipesFromEdamam);
@@ -44,8 +42,13 @@ const RecipeDetail = () => {
 
   const addToFavorites = (recipe) => {
     setFavorites((prevFavorites) => [...prevFavorites, recipe]);
-    // Show success message
     alert('Recipe added to Favorites!');
+  };
+
+  const toggleIngredients = (index) => {
+    const newRecipes = [...filteredRecipes];
+    newRecipes[index].showFullIngredients = !newRecipes[index].showFullIngredients;
+    setFilteredRecipes(newRecipes);
   };
 
   return (
@@ -60,16 +63,26 @@ const RecipeDetail = () => {
         />
       </div>
       <div className="recipe-cards">
-        {filteredRecipes.map((recipe) => (
+        {filteredRecipes.map((recipe, index) => (
           <div key={recipe.id} className="recipe-card">
-            <h3>{recipe.title}</h3>
-            <img src={recipe.image} alt={recipe.title} />
             <div className="recipe-details">
+              <div className="recipe-title">
+                <h3>{recipe.title}</h3>
+                <span role="img" aria-label="Favorite" onClick={() => addToFavorites(recipe)}>❤️</span>
+              </div>
+              <img src={recipe.image} alt={recipe.title} />
               <p>Category: {recipe.dishTypes.join(', ')}</p>
               <p>Area: {recipe.cuisines.join(', ')}</p>
-              <p>Ingredients: {recipe.instructions}</p>
+              <p>Ingredients:</p>
+              <div className={`ingredients-container ${recipe.showFullIngredients ? 'expanded' : ''}`}>
+                {recipe.instructions.map((ingredient, idx) => (
+                  <p key={idx}>{ingredient}</p>
+                ))}
+              </div>
+              <button className="read-more-button" onClick={() => toggleIngredients(index)}>
+                {recipe.showFullIngredients ? 'Read Less' : 'Read More'}
+              </button>
             </div>
-            <button onClick={() => addToFavorites(recipe)}>Add to Favorites</button>
           </div>
         ))}
       </div>
