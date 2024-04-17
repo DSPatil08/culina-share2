@@ -1,10 +1,10 @@
-/* src/pages/RecipeDetail.css */
 .recipe-container {
   max-width: 1200px;
   margin: auto;
   padding: 80px 20px; 
   text-align: center;
 }
+
 .recipe-cards {
   display: flex;
   flex-wrap: wrap;
@@ -30,6 +30,43 @@
 
 .recipe-title {
   color: #c8133a;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  text-align: center;
+}
+
+.recipe-title h3 {
+  margin: 0;
+}
+
+.recipe-title span {
+  margin-left: auto; 
+  cursor: pointer;
+}
+
+.recipe-title span:hover {
+  color: #ff3366;
+}
+
+.read-more-button {
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.read-more-button:hover {
+  transform: scale(1.2);
+}
+
+.ingredients-container {
+  max-height: 100px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.ingredients-container.expanded {
+  max-height: none;
 }
 
 .recipe-details {
@@ -40,7 +77,7 @@
 
 .recipe-details p {
   margin: 5px 0;
-  color: #4caf50;
+  color: #dbaf00;
 }
 
 .recipe-details .category {
@@ -59,20 +96,14 @@
 }
 
 .recipe-details button {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #ff9900;
-  color: #fff;
+  background-color: transparent;
   border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
+  padding: 0;
   cursor: pointer;
 }
 
 .recipe-details button:hover {
-  background-color: #ff6600;
+  background-color: transparent;
 }
 
 h2 {
